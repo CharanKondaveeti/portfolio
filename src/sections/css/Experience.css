@@ -3,3 +3,101 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.timeline-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #202124;
+  font-family: "Poppins", sans-serif;
+}
+
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  justify-content: center;
+  align-items: start;
+  color: #fff;
+  height: 50rem;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-item {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-dot {
+  width: 15px;
+  height: 15px;
+  background-color: #ff4500;
+  border-radius: 50%;
+  z-index: 10;
+  position: relative;
+}
+
+.timeline-dot:not(:first-child) {
+  background-color: white;
+}
+
+.timeline-dot > div {
+  position: absolute;
+
+  width: 30rem;
+  top: 0%;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  transform: translateY(-22px);
+}
+
+.timeline-dot > div > p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.timeline-dot > div > p > span {
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.item--left {
+  right: 5%;
+}
+
+.item--right {
+  left: 5%;
+}
+
+.item--right > p {
+  justify-content: flex-end;
+}
+
+.item--right {
+  flex-direction: row-reverse;
+}

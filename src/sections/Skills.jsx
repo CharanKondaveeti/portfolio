@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from "react";
 import "./css/Skills.css";
 import PhotoshopIcon from "../images/skillIcons/Adobe Photoshop.png";
 import CanvaIcon from "../images/skillIcons/Canva.png";
@@ -38,19 +39,62 @@ const skills = [
 ];
 
 const Skills = () => {
+  const skillItemsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const progressBar = entry.target.querySelector(".progress-bar");
+            const skillItem = entry.target;
+
+            // Animate progress bar and skill item
+            progressBar.style.width = entry.target.dataset.percentage + "%";
+            skillItem.classList.add("in-view");
+          } else {
+            const progressBar = entry.target.querySelector(".progress-bar");
+            const skillItem = entry.target;
+
+            // Reset progress bar and remove skill item animation class
+            progressBar.style.width = "0%";
+            skillItem.classList.remove("in-view");
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the element is in view
+    );
+
+    skillItemsRef.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      skillItemsRef.current.forEach((el) => {
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, []);
+
   return (
     <section className="skills">
       <h1>Skills</h1>
       <ul className="skills-list">
         {skills.map((skill, index) => (
-          <li key={index} className="skill-item">
+          <li
+            key={index}
+            className="skill-item"
+            ref={(el) => (skillItemsRef.current[index] = el)}
+            data-percentage={skill.percentage}
+          >
             <span className="skill-name">{skill.name}</span>
             <img src={skill.imgSrc} alt={skill.name} className="skill-icon" />
-            <span
-              style={{
-                background: `linear-gradient(to right, ${skill.color} ${skill.percentage}%, black 30%)`,
-              }}
-            ></span>
+            <div className="progress-bar-bg">
+              <span
+                className="progress-bar"
+                style={{ backgroundColor: skill.color }}
+              ></span>
+            </div>
           </li>
         ))}
       </ul>
