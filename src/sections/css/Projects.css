@@ -1,0 +1,110 @@
+.projects {
+  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem;
+
+  color: rgb(255 255 255);
+}
+
+.projects > h1 {
+  background: linear-gradient(to right, #76ff03, #388e3c);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects > h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem !important;
+}
+
+.project-card {
+  display: flex;
+  gap: 2rem;
+  background-color: #343537;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  margin-bottom: 2rem;
+  max-width: 65rem;
+
+  overflow: hidden;
+
+  transform: scale(0.8);
+  /* transition: 0.5s all ease; */
+}
+
+.project-card:hover {
+  background-color: #414345;
+}
+
+.project-card:hover > .project-image {
+  transform: scale(1.05) rotate(-2deg) translateX(-2rem);
+}
+
+.project-info {
+  flex: 1;
+  padding: 4rem 0rem 3rem 4rem;
+}
+
+.project-info > h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+.project-info p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  margin-bottom: 4rem;
+  columns: hsla(0, 0%, 100%, 0.7);
+}
+
+.tech-stack {
+  display: flex;
+  gap: 10px;
+}
+
+.tech-badge {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+}
+
+.project-image {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1) rotate(0deg) translateX(0rem);
+  transition: 0.2s all ease-in-out;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+
+  position: absolute;
+  transform: translate(8rem, 18rem);
+  width: 40rem;
+
+  border-radius: 9px;
+}
+
+.project-card.in-view {
+  transform: scale(1);
+  opacity: 1;
+}

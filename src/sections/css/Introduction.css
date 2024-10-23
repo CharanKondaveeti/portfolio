@@ -1,0 +1,133 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #ffffff;
+
+  padding: 0rem 3.2rem;
+
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 50%;
+  background: linear-gradient(-270deg, #161513, rgba(255, 136, 0, 1));
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.5rem;
+  border: 5px solid white; /* Add white circular border */
+}
+
+.avatar > img {
+  width: auto;
+  height: 90%;
+}
+
+.name-tag {
+  position: absolute;
+  top: 30%;
+  right: -50%;
+  color: #000;
+  background-color: #f4f4f4;
+
+  padding: 0.8rem 1rem;
+  border-radius: 150px;
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  font-family: "Nunito Sans", sans-serif;
+  transform: rotate(-30deg);
+}
+
+.intro > h1 {
+  font-size: 5.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
+  color: #ffffffcf;
+}
+
+.highlight {
+}
+
+.highlight:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+    0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 136, 0, 1),
+    0 0 40px rgba(255, 136, 0, 1), 0 0 50px rgba(255, 136, 0, 1),
+    0 0 70px rgba(255, 136, 0, 1);
+}
+
+.description {
+  font-size: 1.8rem;
+  margin: 20px 0;
+  line-height: 1.7;
+  opacity: 0.8;
+  padding: 0 23rem;
+  font-weight: 200;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-typ-1,
+.btn-typ-2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+
+  backface-visibility: hidden;
+}
+
+.btn-typ-2 {
+  justify-content: center;
+  width: 5.5rem;
+  border-radius: 50%;
+  background-color: #343537;
+}
+
+.btn-typ-2 > svg {
+  color: #abacb1;
+}
+.contact-btn,
+.cv-btn {
+  font-family: "Poppins", sans-serif;
+  padding: 1.2rem 2.8rem;
+  border-radius: 50px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.contact-btn {
+  background-color: #343537;
+  color: #f4f4f4;
+}
+
+.cv-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 3px solid #343537;
+}
+
+.contact-btn:hover,
+.cv-btn:hover {
+  transform: scale(1.05);
+}
