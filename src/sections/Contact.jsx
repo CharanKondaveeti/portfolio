@@ -12,12 +12,12 @@ const Contact = () => {
       </p>
 
       <div className="contact-buttons">
-        <a className="button email" href="mailto:your.email@example.com">
+        <a className="button email" href="charankondaveeti27@gmail.com">
           <FontAwesomeIcon icon={faEnvelope} /> Email Me
         </a>
         <a
           className="button whatsapp"
-          href="https://wa.me/yourwhatsappphonenumber"
+          href="https://wa.me/916303404327"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -1,33 +1,63 @@
 import { useEffect } from "react";
 import "./css/Projects.css";
 
+import { HiOutlineExternalLink } from "react-icons/hi";
+
+import howtometro from "./../images/works/howtometro.jpg";
+import memeplate from "./../images/works/memeplate.jpg";
+import dicegame from "./../images/works/dicegame.jpg";
+import solar from "./../images/works/solar.jpg";
+import bombie from "./../images/works/bombie.jpg";
+import restaurantbilling from "./../images/works/restaurantbilling.jpg";
+
 const projects = [
   {
-    title: "Weather App",
+    title: "HowToMetro",
     description:
-      "A weather forecasting application that shows current weather and forecast data for any location, using the OpenWeatherMap API.",
-    link: "https://weather-app.netlify.app/",
-    techStack: ["JavaScript", "API", "CSS"],
-    image:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+      "A comprehensive guide to navigating Hyderabad Metro. It offers detailed routes, stops, and travel information.",
+    link: "https://howtometro.vercel.app/",
+    techStack: ["React"],
+    image: howtometro,
   },
   {
-    title: "Personal Portfolio",
+    title: "MemePlate",
     description:
-      "My personal website showcasing my projects, blog, and contact details. Built with React and deployed using Netlify.",
-    link: "https://your-portfolio.netlify.app/",
-    techStack: ["React", "CSS", "Netlify"],
-    image:
-      "https://images.unsplash.com/photo-1556761175-4b46a572b786?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+      "A platform for memers to find, create, and share meme templates effortlessly, enhancing creative expression.",
+    link: "https://memeplate.vercel.app/homepage",
+    techStack: ["React", "Node.js", "Cloudinary"],
+    image: memeplate,
   },
   {
-    title: "E-Commerce Store",
+    title: "Bombie",
     description:
-      "An e-commerce web application with product listing, cart management, and payment integration using Stripe API.",
-    link: "https://ecommerce-store.herokuapp.com/",
-    techStack: ["Node.js", "Express", "Stripe API"],
-    image:
-      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+      "A fun guessing game where players pick between a banana for progress or a bomb to lose.",
+    link: "https://bombie.vercel.app/",
+    techStack: ["JavaScript", "HTML", "CSS"],
+    image: bombie,
+  },
+  {
+    title: "Solar CSS",
+    description:
+      "A CSS animation project showcasing space-themed visuals while testing front-end design and animation skills.",
+    link: "https://space-revolution.vercel.app/",
+    techStack: ["CSS"],
+    image: solar,
+  },
+  {
+    title: "Dice Game",
+    description:
+      "A simple dice game where players roll dice aiming for high scores, featuring smooth UI interactions.",
+    link: "https://rollingdice.vercel.app/",
+    techStack: ["JavaScript", "HTML", "CSS"],
+    image: dicegame,
+  },
+  {
+    title: "Restaurant Billing System",
+    description:
+      "A system for managing restaurant orders and billing, enhancing workflow efficiency for staff and customers.",
+    link: "https://charankondaveeti.github.io/restaurant-billing-app/",
+    techStack: ["React"],
+    image: restaurantbilling,
   },
 ];
 
@@ -65,7 +95,12 @@ const Projects = () => {
       {projects.map((project, index) => (
         <div className="project-card" key={index}>
           <div className="project-info">
-            <h2>{project.title}</h2>
+            <h2>
+              {project.title}
+              <a className="openilink--btn" href={project.link}>
+                <HiOutlineExternalLink size={20} />
+              </a>
+            </h2>
             <p>{project.description}</p>
             <div className="tech-stack">
               {project.techStack.map((tech, i) => (

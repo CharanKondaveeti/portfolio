@@ -24,18 +24,24 @@ const Introduction = () => {
         enabling seamless user experiences across various platforms.
       </p>
       <div className="button-group">
-        <button className="contact-btn btn-typ-1">
+        <a className="contact-btn btn-typ-1">
           Get In Touch <HiArrowLongRight size={25} />
-        </button>
-        <button className="cv-btn btn-typ-1">
+        </a>
+        <a className="cv-btn btn-typ-1">
           Download <HiDownload size={25} fill="white" />
-        </button>
-        <button className="linkedin-btn btn-typ-2">
-          <FaGithubSquare size={25} />
-        </button>
-        <button className="github-btn -btn btn-typ-2">
+        </a>
+        <a
+          href="https://github.com/CharanKondaveeti"
+          className="linkedin-btn btn-typ-2"
+        >
           <FaLinkedin size={25} />
-        </button>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/charan-kondaveeti-11b77b293/"
+          className="github-btn -btn btn-typ-2"
+        >
+          <FaGithubSquare size={25} />
+        </a>
       </div>
     </section>
   );

@@ -14,6 +14,21 @@ import NodejsIcon from "../images/skillIcons/Nodejs.png";
 import MongoDBIcon from "../images/skillIcons/MongoDB.png";
 
 const skills = [
+  { name: "React", imgSrc: ReactIcon, color: "#61DAFB", percentage: 80 },
+  {
+    name: "JavaScript",
+    imgSrc: JavaScriptIcon,
+    color: "#F7DF1E",
+    percentage: 85,
+  },
+  { name: "HTML5", imgSrc: HTML5Icon, color: "#e34c26", percentage: 95 },
+  { name: "CSS3", imgSrc: CSS3Icon, color: "#264de4", percentage: 90 },
+  { name: "Tailwind", imgSrc: TailwindIcon, color: "#06B6D4", percentage: 75 },
+  { name: "Git", imgSrc: GitIcon, color: "#F05032", percentage: 75 },
+  { name: "MySQL", imgSrc: MySQLIcon, color: "#00758F", percentage: 70 },
+  { name: "Python", imgSrc: PythonIcon, color: "#306998", percentage: 60 },
+  { name: "Node.js", imgSrc: NodejsIcon, color: "#339933", percentage: 80 },
+  { name: "MongoDB", imgSrc: MongoDBIcon, color: "#47A248", percentage: 70 },
   {
     name: "Photoshop",
     imgSrc: PhotoshopIcon,
@@ -21,21 +36,6 @@ const skills = [
     percentage: 80,
   },
   { name: "Canva", imgSrc: CanvaIcon, color: "#00C4CC", percentage: 85 },
-  { name: "CSS3", imgSrc: CSS3Icon, color: "#264de4", percentage: 90 },
-  { name: "Git", imgSrc: GitIcon, color: "#F05032", percentage: 75 },
-  { name: "HTML5", imgSrc: HTML5Icon, color: "#e34c26", percentage: 95 },
-  {
-    name: "JavaScript",
-    imgSrc: JavaScriptIcon,
-    color: "#F7DF1E",
-    percentage: 85,
-  },
-  { name: "MySQL", imgSrc: MySQLIcon, color: "#00758F", percentage: 70 },
-  { name: "Python", imgSrc: PythonIcon, color: "#306998", percentage: 60 },
-  { name: "React", imgSrc: ReactIcon, color: "#61DAFB", percentage: 80 },
-  { name: "Tailwind", imgSrc: TailwindIcon, color: "#06B6D4", percentage: 75 },
-  { name: "Node.js", imgSrc: NodejsIcon, color: "#339933", percentage: 80 },
-  { name: "MongoDB", imgSrc: MongoDBIcon, color: "#47A248", percentage: 70 },
 ];
 
 const Skills = () => {

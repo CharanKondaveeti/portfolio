@@ -13,8 +13,10 @@ const experience = [
     duration: "Jan 2022 - Dec 2022",
     description: "Developed user-friendly interfaces for web applications.",
   },
-  // Add more experience data if needed
 ];
+import { SlGraduation } from "react-icons/sl";
+import { LuCode2 } from "react-icons/lu";
+import { AiOutlineCaretRight } from "react-icons/ai";
 
 const Experience = () => {
   return (
@@ -22,61 +24,50 @@ const Experience = () => {
       <h1>My Timeline</h1>
       <div className="timeline">
         <div className="timeline-dot ">
-          <div className="item--left">
+          <span className="icon">
+            <SlGraduation size={25} />
+          </span>
+          <div className="item--info left">
             <p>
-              <span>may-6th 2022</span>
-              completed my Btech Graduation
+              <span>Information technology </span>Completed my BTech Graduation
             </p>
-            <FaCode size={20} />
+            <span className="pointer--head">
+              <AiOutlineCaretRight size={20} />
+            </span>
           </div>
+          <p className="item--period right">May 2022</p>
         </div>
 
         <div className="timeline-dot">
-          <div className=" item--right">
+          <span className="icon">
+            <LuCode2 size={25} />
+          </span>
+          <div className="item--info right">
             <p>
-              <span>may-6th 2022</span>
-              completed my Btech Graduation
+              <span>Junior Software Engineer </span>
+              Hajjitech solutions private limited
             </p>
-            <FaCode size={20} />
+            <span className="pointer--head">
+              <AiOutlineCaretRight size={20} />
+            </span>
           </div>
+          <p className="item--period left">May 2022 - Apr 2024</p>
         </div>
 
         <div className="timeline-dot ">
-          <div className="item--left">
+          <span className="icon">
+            <LuCode2 size={25} />
+          </span>
+          <div className="item--info left">
             <p>
-              <span>may-6th 2022</span>
-              completed my Btech Graduation
-            </p>
-            <FaCode size={20} />
+              <span>Software Engineer </span>
+              Vts enterprises india private limited
+            </p>{" "}
+            <span className="pointer--head">
+              <AiOutlineCaretRight size={20} />
+            </span>
           </div>
-        </div>
-
-        <div className="timeline-dot">
-          <div className=" item--right">
-            <p>
-              <span>may-6th 2022</span>
-              completed my Btech Graduation
-            </p>
-            <FaCode size={20} />
-          </div>
-        </div>
-        <div className="timeline-dot">
-          <div className="item--left">
-            <p>
-              <span>may-6th 2022</span>
-              completed my Btech Graduation
-            </p>
-            <FaCode size={20} />
-          </div>
-        </div>
-        <div className="timeline-dot">
-          <div className=" item--right">
-            <p>
-              <span>may-6th 2022</span>
-              completed my Btech Graduation
-            </p>
-            <FaCode size={20} />
-          </div>
+          <p className="item--period right">May 2024</p>
         </div>
       </div>
     </section>

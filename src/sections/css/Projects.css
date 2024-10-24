@@ -28,7 +28,7 @@
 
 .project-card {
   display: flex;
-  gap: 2rem;
+  /* gap: 2rem; */
   background-color: #343537;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -66,6 +66,8 @@
   line-height: 1.7;
   margin-bottom: 4rem;
   columns: hsla(0, 0%, 100%, 0.7);
+
+  padding-right: 5rem;
 }
 
 .tech-stack {
@@ -96,15 +98,20 @@
 .project-image img {
   width: 100%;
   height: auto;
-
+  border-radius: 8px;
   position: absolute;
-  transform: translate(8rem, 18rem);
-  width: 40rem;
-
-  border-radius: 9px;
+  transform: translate(15rem, 17rem);
+  width: 60rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .project-card.in-view {
   transform: scale(1);
   opacity: 1;
+}
+
+.openilink--btn {
+  margin-left: 1rem;
+  color: white;
 }
