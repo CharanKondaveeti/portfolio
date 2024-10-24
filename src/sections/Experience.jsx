@@ -1,28 +1,40 @@
+import React, { useEffect, useRef } from "react";
 import "./css/Experience.css";
-import { FaCode } from "react-icons/fa";
-const experience = [
-  {
-    jobTitle: "Software Developer",
-    company: "Company A",
-    duration: "Jan 2023 - Present",
-    description: "Worked on various projects using React and Node.js.",
-  },
-  {
-    jobTitle: "Frontend Developer",
-    company: "Company B",
-    duration: "Jan 2022 - Dec 2022",
-    description: "Developed user-friendly interfaces for web applications.",
-  },
-];
 import { SlGraduation } from "react-icons/sl";
 import { LuCode2 } from "react-icons/lu";
 import { AiOutlineCaretRight } from "react-icons/ai";
 
 const Experience = () => {
+  const timelineRef = useRef(null);
+
+  useEffect(() => {
+    const timelineElements =
+      timelineRef.current.querySelectorAll(".timeline-dot");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          } else {
+            entry.target.classList.remove("in-view");
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger when 20% of the item is visible
+    );
+
+    timelineElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      timelineElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <section className="timeline-section experience">
       <h1>My Timeline</h1>
-      <div className="timeline">
+      <div className="timeline" ref={timelineRef}>
         <div className="timeline-dot ">
           <span className="icon">
             <SlGraduation size={25} />

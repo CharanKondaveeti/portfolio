@@ -172,3 +172,49 @@
   right: 0%;
   transform: translate(14px, -50%);
 }
+
+.timeline-dot {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.timeline-dot.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-dot .item--info {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.timeline-dot.in-view .item--info {
+  opacity: 1;
+  transform: translateX(-100px);
+}
+
+.timeline-dot.in-view .item--info.right {
+  transform: translateX(100px);
+}
+
+.timeline-dot .item--period {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.timeline-dot.in-view .item--period {
+  opacity: 1;
+  transform: translateX(90px);
+}
+
+.timeline-dot.in-view .item--period.left {
+  transform: translateX(-90px);
+}
+
+.timeline-dot:last-child .item--info {
+  border: 2px solid #fab005;
+  border-radius: 5px;
+}
