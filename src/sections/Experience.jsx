@@ -63,7 +63,7 @@ const Experience = () => {
               <AiOutlineCaretRight size={20} />
             </span>
           </div>
-          <p className="item--period left">May 2022 - Apr 2024</p>
+          <p className="item--period left">June 2022 - Apr 2024</p>
         </div>
 
         <div className="timeline-dot ">
