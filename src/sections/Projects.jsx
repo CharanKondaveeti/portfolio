@@ -23,8 +23,8 @@ const projects = [
     title: "MemePlate",
     description:
       "A platform for memers to find, create, and share meme templates effortlessly, enhancing creative expression.",
-    link: "https://memeplate.vercel.app/homepage",
-    techStack: ["React", "Node.js", "Cloudinary"],
+    link: "https://memeplate.vercel.app/",
+    techStack: ["React", "Node.js"],
     image: memeplate,
   },
   {
@@ -97,7 +97,12 @@ const Projects = () => {
           <div className="project-info">
             <h2>
               {project.title}
-              <a className="openilink--btn" href={project.link}>
+              <a
+                className="openilink--btn"
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <HiOutlineExternalLink size={20} />
               </a>
             </h2>
@@ -109,9 +114,6 @@ const Projects = () => {
                 </span>
               ))}
             </div>
-            {/* <a href={project.link} target="_blank" rel="noopener noreferrer">
-              View Project
-            </a> */}
           </div>
           <div className="project-image">
             <img src={project.image} alt={`${project.title} screenshot`} />
