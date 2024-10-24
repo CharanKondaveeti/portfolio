@@ -18,7 +18,7 @@ const Introduction = () => {
         <span className="highlight">responsive & user-friendly!</span>
       </h1>
       <p className="description">
-        I am a skilled full-stack developer with over 2 years of professional
+        I am a skilled full-stack developer with over 2.5 years of professional
         experience, specializing in building dynamic web applications. My focus
         is on developing robust, scalable solutions using the MERN stack,
         enabling seamless user experiences across various platforms.
